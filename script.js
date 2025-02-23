@@ -1,22 +1,32 @@
-let penghasilan = 5000000
-let i = 1;
-let kehadirann;
+let Gaji = 5000000
+let Bonus1 = 200000
+let Bonus2 =  500000
+let Telat =  200000
 
-do{
-    let bonus = 0
-    if(i > 20){
-        bonus = 500000 
-    }
-    let hasil=penghasilan + 200000*i + bonus
-    console.log(`ini gajimu ke ${i}berjumlah ${hasil}`);
+alert("HALO SELAMAT DATANG")
+let izin = prompt("Kamu izin berapa kali sebulan ?")
+let kehadiran = prompt("Kamu masuk berapa hari dalam sebulan ?")
+let masuk = (kehadiran*Bonus1)
 
-    kehadirann = confirm('apa kamu terlambat hari ini')
-    if(kehadirann){
-        hasil -= 2000000
-        console.log(`anda terkena denda sebesar Rp.2JT ${hasil} `);
-        break
+let massuk2 = (kehadiran*Bonus2)
+let sakit = (izin*Telat)
+
+
+if(kehadiran < 20){
+    let Hasil1 =  Gaji + masuk;
+    alert(`Gaji kamu bulan ini sebesar Rp${Hasil1}`)
+
+if (izin >= 1) {
+
+alert(`Gajimu dipotong Rp ${Hasil1 - sakit}`)
+}
+}else if(kehadiran >= 21){
+
+let Hasil2 = Gaji + massuk2
+
+    alert(`Gaji kamu bulan ini mendapatkan bonus Rp${Hasil2}`);
+    if (izin >= 1) {
+
+    alert(`Gajimu dipotong Rp ${Hasil2 - sakit}`)
     }
-    
-    i++
-}while (i <= 31) 
-    
+}
